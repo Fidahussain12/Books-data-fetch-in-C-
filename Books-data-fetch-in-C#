@@ -1,0 +1,34 @@
+using System;
+
+public class Books
+{
+    private string title;
+    private string author;
+
+    public Books(string title, string author)
+    {
+        this.title = title;
+        this.author = author;
+    }
+
+    public string GetTitle()
+    {
+        return title;
+    }
+
+    public string GetAuthor()
+    {
+        return author;
+    }
+
+    public string Display()
+    {
+        return $"Title: {this.GetTitle()}, Author: {this.GetAuthor()}";
+    }
+
+    public static void Main()
+    {
+        Books b = new Books("1984", "George Orwell");
+        Console.WriteLine(b.Display());
+    }
+}
